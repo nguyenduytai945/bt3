@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hamkiemtrasonguyento</title>
+</head>
+<form>
+    <p>
+        <label>Feet</label>
+        <input id="Feet" type="text">
+        <input type=button value='Chuyển đổi sang Feet' onclick="feet()">
+        <div id="result"></div>
+    </p>
+    <p>
+        <label>Meters</label>
+        <input id="Meters" type="text">
+        <input type=button value='Chuyển đổi sang Meters' onclick="meters()">
+        <div id="result1"></div>
+    </p>
+
+</form>
+
+<body>
+
+</body>
+<script>
+    function feetToMeter(valueFeet) {
+        return 3.279 * valueFeet;
+    }
+
+    function feet() {
+        let feet = parseFloat(document.getElementById("Feet").value);
+        document.getElementById("result").innerHTML = feetToMeter(feet);
+    }
+
+
+    function metersToFeet(valueMeters) {
+        return 0.305 * valueMeters;
+    }
+
+    function meters() {
+        let meters = parseFloat(document.getElementById("Meters").value);
+        document.getElementById("result1").innerHTML = metersToFeet(meters);
+    }
+</script>
+
+</html>

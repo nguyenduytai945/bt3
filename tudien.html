@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Từ điển</title>
+</head>
+
+<body>
+    <input type="text" id="a">
+    <input type="button" value="timkiem" onclick="timkiem();">
+    <div id="result"></div>
+</body>
+<script>
+    let anhvan = ['hello', 'you'];
+    let vietnam = ['xin chào', 'bạn'];
+
+    function timkiem() {
+        let a1 = document.getElementById('a').value;
+        for (let i = 0; i < anhvan.length; i++) {
+            if (a1 === anhvan[i]) {
+                document.getElementById('result').innerHTML = vietnam[i];
+            }
+        }
+    }
+</script>
+
+</html>
